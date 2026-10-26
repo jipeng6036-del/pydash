@@ -1,0 +1,62 @@
+{
+  "preparedAtUtc": "2026-10-26T17:56:35.674090+00:00",
+  "repository": "dgilland/pydash",
+  "base": "ef6a6427e488e29e827e0e0819f2630ad3ff4cdc",
+  "head": "5674ec55d429ade516688fe696688d588b246aa9",
+  "branch": "fix/preserve-right-reduction-indexes",
+  "files": 4,
+  "additions": 33,
+  "deletions": 5,
+  "linuxOfficialTox": [
+    {
+      "env": "py310",
+      "version": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+      "exit": 0,
+      "tests": 2886,
+      "coverage": "100%",
+      "installedConsumerPass": true
+    },
+    {
+      "env": "py311",
+      "version": "3.11.17 (main, Oct 21 2026, 01:07:38) [GCC 14.2.0]",
+      "exit": 0,
+      "tests": 2886,
+      "coverage": "100%",
+      "installedConsumerPass": true
+    },
+    {
+      "env": "py313",
+      "version": "3.13.17 (main, Oct 21 2026, 22:33:32) [GCC 14.2.0]",
+      "exit": 0,
+      "tests": 2886,
+      "coverage": "100%",
+      "installedConsumerPass": true
+    },
+    {
+      "env": "py312",
+      "version": "3.12.14 (main, Aug 25 2026, 01:17:55) [GCC 14.2.0]",
+      "exit": 0,
+      "tests": 2886,
+      "coverage": "100%",
+      "installedConsumerPass": true
+    },
+    {
+      "env": "py314",
+      "version": "3.14.9 (main, Oct 21 2026, 22:25:42) [GCC 14.2.0]",
+      "exit": 0,
+      "tests": 2886,
+      "coverage": "100%",
+      "installedConsumerPass": true
+    }
+  ],
+  "windowsPython": "3.13.1",
+  "windowsBaselineTests": 2880,
+  "windowsCandidateTests": 2886,
+  "windowsCoverage": "100%",
+  "newRegressionBaseline": "6 failed",
+  "newRegressionCandidate": "6 passed",
+  "upstreamCI": "Only after PR; not claimed passed",
+  "sourceDriven": true,
+  "externalServiceCalls": false,
+  "humanReviewClaim": false
+}

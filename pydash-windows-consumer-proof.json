@@ -1,0 +1,106 @@
+[
+  {
+    "mode": "baseline",
+    "returncode": 1,
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-consumer.py"
+    ],
+    "PYTHONPATH": "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-baseline\\src",
+    "result": {
+      "python": "3.13.1 (main, Jan 14 2025, 22:47:35) [MSC v.1942 64 bit (AMD64)]",
+      "packageFile": "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-baseline\\src\\pydash\\__init__.py",
+      "visits": [
+        {
+          "row": 0,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 2,
+          "item": "first"
+        }
+      ],
+      "totals": [
+        30,
+        70,
+        100
+      ],
+      "expectedVisits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "expectedTotals": [
+        90,
+        130,
+        140
+      ],
+      "pass": false
+    }
+  },
+  {
+    "mode": "candidate",
+    "returncode": 0,
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-consumer.py"
+    ],
+    "PYTHONPATH": null,
+    "result": {
+      "python": "3.13.1 (main, Jan 14 2025, 22:47:35) [MSC v.1942 64 bit (AMD64)]",
+      "packageFile": "<workspace>\\inspection\\resume-20261026-root-pydash\\src\\pydash\\__init__.py",
+      "visits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "totals": [
+        90,
+        130,
+        140
+      ],
+      "expectedVisits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "expectedTotals": [
+        90,
+        130,
+        140
+      ],
+      "pass": true
+    }
+  }
+]

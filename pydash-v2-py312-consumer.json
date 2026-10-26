@@ -1,0 +1,43 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 01:17:55) [GCC 14.2.0]",
+  "packageFile": "/work/.tox/py312/lib/python3.12/site-packages/pydash/__init__.py",
+  "visits": [
+    {
+      "row": 2,
+      "item": "last"
+    },
+    {
+      "row": 1,
+      "item": "middle"
+    },
+    {
+      "row": 0,
+      "item": "first"
+    }
+  ],
+  "totals": [
+    90,
+    130,
+    140
+  ],
+  "expectedVisits": [
+    {
+      "row": 2,
+      "item": "last"
+    },
+    {
+      "row": 1,
+      "item": "middle"
+    },
+    {
+      "row": 0,
+      "item": "first"
+    }
+  ],
+  "expectedTotals": [
+    90,
+    130,
+    140
+  ],
+  "pass": true
+}

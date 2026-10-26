@@ -1,0 +1,115 @@
+FFFFFF                                                                   [100%]
+================================== FAILURES ===================================
+_________ test_right_reductions_keep_original_sequence_indexes[list] __________
+
+factory = <class 'list'>
+
+    @parametrize("factory", [list, tuple, iter])
+    def test_right_reductions_keep_original_sequence_indexes(factory):
+        values = [10, 20, 30]
+    
+        def collect(accumulator, value, index):
+            return accumulator + [(index, value)]
+    
+        expected = [(2, 30), (1, 20), (0, 10)]
+>       assert _.reduce_right(factory(values), collect, []) == expected
+E       assert [(0, 30), (1, 20), (2, 10)] == [(2, 30), (1, 20), (0, 10)]
+E         
+E         At index 0 diff: (0, 30) != (2, 30)
+E         Use -v to get more diff
+
+tests\test_collections.py:24: AssertionError
+_________ test_right_reductions_keep_original_sequence_indexes[tuple] _________
+
+factory = <class 'tuple'>
+
+    @parametrize("factory", [list, tuple, iter])
+    def test_right_reductions_keep_original_sequence_indexes(factory):
+        values = [10, 20, 30]
+    
+        def collect(accumulator, value, index):
+            return accumulator + [(index, value)]
+    
+        expected = [(2, 30), (1, 20), (0, 10)]
+>       assert _.reduce_right(factory(values), collect, []) == expected
+E       assert [(0, 30), (1, 20), (2, 10)] == [(2, 30), (1, 20), (0, 10)]
+E         
+E         At index 0 diff: (0, 30) != (2, 30)
+E         Use -v to get more diff
+
+tests\test_collections.py:24: AssertionError
+_________ test_right_reductions_keep_original_sequence_indexes[iter] __________
+
+factory = <built-in function iter>
+
+    @parametrize("factory", [list, tuple, iter])
+    def test_right_reductions_keep_original_sequence_indexes(factory):
+        values = [10, 20, 30]
+    
+        def collect(accumulator, value, index):
+            return accumulator + [(index, value)]
+    
+        expected = [(2, 30), (1, 20), (0, 10)]
+>       assert _.reduce_right(factory(values), collect, []) == expected
+E       assert [(0, 30), (1, 20), (2, 10)] == [(2, 30), (1, 20), (0, 10)]
+E         
+E         At index 0 diff: (0, 30) != (2, 30)
+E         Use -v to get more diff
+
+tests\test_collections.py:24: AssertionError
+___ test_right_reductions_keep_indexes_without_an_initial_accumulator[list] ___
+
+factory = <class 'list'>
+
+    @parametrize("factory", [list, tuple, iter])
+    def test_right_reductions_keep_indexes_without_an_initial_accumulator(factory):
+        def weighted_total(accumulator, value, index):
+            return accumulator + value * (index + 1)
+    
+>       assert _.reduce_right(factory([10, 20, 30]), weighted_total) == 80
+E       AssertionError: assert 100 == 80
+E        +  where 100 = <function reduce_right at 0x000001D81720A160>([10, 20, 30], <function test_right_reductions_keep_indexes_without_an_initial_accumulator.<locals>.weighted_total at 0x000001D816CFD1C0>)
+E        +    where <function reduce_right at 0x000001D81720A160> = _.reduce_right
+E        +    and   [10, 20, 30] = <class 'list'>([10, 20, 30])
+
+tests\test_collections.py:39: AssertionError
+__ test_right_reductions_keep_indexes_without_an_initial_accumulator[tuple] ___
+
+factory = <class 'tuple'>
+
+    @parametrize("factory", [list, tuple, iter])
+    def test_right_reductions_keep_indexes_without_an_initial_accumulator(factory):
+        def weighted_total(accumulator, value, index):
+            return accumulator + value * (index + 1)
+    
+>       assert _.reduce_right(factory([10, 20, 30]), weighted_total) == 80
+E       AssertionError: assert 100 == 80
+E        +  where 100 = <function reduce_right at 0x000001D81720A160>((10, 20, 30), <function test_right_reductions_keep_indexes_without_an_initial_accumulator.<locals>.weighted_total at 0x000001D81715EB60>)
+E        +    where <function reduce_right at 0x000001D81720A160> = _.reduce_right
+E        +    and   (10, 20, 30) = <class 'tuple'>([10, 20, 30])
+
+tests\test_collections.py:39: AssertionError
+___ test_right_reductions_keep_indexes_without_an_initial_accumulator[iter] ___
+
+factory = <built-in function iter>
+
+    @parametrize("factory", [list, tuple, iter])
+    def test_right_reductions_keep_indexes_without_an_initial_accumulator(factory):
+        def weighted_total(accumulator, value, index):
+            return accumulator + value * (index + 1)
+    
+>       assert _.reduce_right(factory([10, 20, 30]), weighted_total) == 80
+E       assert 100 == 80
+E        +  where 100 = <function reduce_right at 0x000001D81720A160>(<list_iterator object at 0x000001D818648100>, <function test_right_reductions_keep_indexes_without_an_initial_accumulator.<locals>.weighted_total at 0x000001D81715E160>)
+E        +    where <function reduce_right at 0x000001D81720A160> = _.reduce_right
+E        +    and   <list_iterator object at 0x000001D818648100> = <built-in function iter>([10, 20, 30])
+
+tests\test_collections.py:39: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_collections.py::test_right_reductions_keep_original_sequence_indexes[list]
+FAILED tests/test_collections.py::test_right_reductions_keep_original_sequence_indexes[tuple]
+FAILED tests/test_collections.py::test_right_reductions_keep_original_sequence_indexes[iter]
+FAILED tests/test_collections.py::test_right_reductions_keep_indexes_without_an_initial_accumulator[list]
+FAILED tests/test_collections.py::test_right_reductions_keep_indexes_without_an_initial_accumulator[tuple]
+FAILED tests/test_collections.py::test_right_reductions_keep_indexes_without_an_initial_accumulator[iter]
+6 failed, 214 deselected in 0.50s

@@ -1,0 +1,307 @@
+[
+  {
+    "version": "3.10",
+    "env": "py310",
+    "candidateHead": "5674ec55d429ade516688fe696688d588b246aa9",
+    "archiveSha256": "a1cba56856f0eb19455ac6b7c2ebee095ffc03d877b7def33748193345eaa4a6",
+    "container": "ghpr-resume-pydash-v2-py310",
+    "imageId": "sha256:6ff506466f8b1e981719b468cc0023b8ef000b983cdec0eafe119d01f379e31d",
+    "startedAtUtc": "2026-10-26T17:28:00.054449659Z",
+    "completedAtUtc": "2026-10-26T17:33:49.889049439Z",
+    "returncode": 0,
+    "oomKilled": false,
+    "command": [
+      "sh",
+      "/proof/pydash-linux-run-v2.sh",
+      "py310"
+    ],
+    "fullLogRecoveredFromDocker": true,
+    "installedPackageConsumer": {
+      "python": "3.10.22 (main, Oct  6 2026, 02:05:33) [GCC 14.2.0]",
+      "packageFile": "/work/.tox/py310/lib/python3.10/site-packages/pydash/__init__.py",
+      "visits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "totals": [
+        90,
+        130,
+        140
+      ],
+      "expectedVisits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "expectedTotals": [
+        90,
+        130,
+        140
+      ],
+      "pass": true
+    }
+  },
+  {
+    "version": "3.11",
+    "env": "py311",
+    "candidateHead": "5674ec55d429ade516688fe696688d588b246aa9",
+    "archiveSha256": "a1cba56856f0eb19455ac6b7c2ebee095ffc03d877b7def33748193345eaa4a6",
+    "container": "ghpr-resume-pydash-v2-py311",
+    "imageId": "sha256:b7a9e5f6a93d6d4a31f129bbd4bdee69efccb6ded0fb230d78aafaf37af98377",
+    "startedAtUtc": "2026-10-26T17:27:59.998369684Z",
+    "completedAtUtc": "2026-10-26T17:33:36.942317693Z",
+    "returncode": 0,
+    "oomKilled": false,
+    "command": [
+      "sh",
+      "/proof/pydash-linux-run-v2.sh",
+      "py311"
+    ],
+    "fullLogRecoveredFromDocker": true,
+    "installedPackageConsumer": {
+      "python": "3.11.17 (main, Oct 21 2026, 01:07:38) [GCC 14.2.0]",
+      "packageFile": "/work/.tox/py311/lib/python3.11/site-packages/pydash/__init__.py",
+      "visits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "totals": [
+        90,
+        130,
+        140
+      ],
+      "expectedVisits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "expectedTotals": [
+        90,
+        130,
+        140
+      ],
+      "pass": true
+    }
+  },
+  {
+    "version": "3.13",
+    "env": "py313",
+    "candidateHead": "5674ec55d429ade516688fe696688d588b246aa9",
+    "archiveSha256": "a1cba56856f0eb19455ac6b7c2ebee095ffc03d877b7def33748193345eaa4a6",
+    "container": "ghpr-resume-pydash-v2-py313",
+    "imageId": "sha256:57b29a7c050c4e679e4bea572e14b3965cf4b5839de2da49d55e49ffc4024f39",
+    "startedAtUtc": "2026-10-26T17:37:21.816250833Z",
+    "completedAtUtc": "2026-10-26T17:48:06.965896955Z",
+    "returncode": 0,
+    "oomKilled": false,
+    "command": [
+      "sh",
+      "/proof/pydash-linux-run-v2.sh",
+      "py313"
+    ],
+    "fullLogRecoveredFromDocker": true,
+    "installedPackageConsumer": {
+      "python": "3.13.17 (main, Oct 21 2026, 22:33:32) [GCC 14.2.0]",
+      "packageFile": "/work/.tox/py313/lib/python3.13/site-packages/pydash/__init__.py",
+      "visits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "totals": [
+        90,
+        130,
+        140
+      ],
+      "expectedVisits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "expectedTotals": [
+        90,
+        130,
+        140
+      ],
+      "pass": true
+    }
+  },
+  {
+    "version": "3.12",
+    "env": "py312",
+    "candidateHead": "5674ec55d429ade516688fe696688d588b246aa9",
+    "archiveSha256": "a1cba56856f0eb19455ac6b7c2ebee095ffc03d877b7def33748193345eaa4a6",
+    "container": "ghpr-resume-pydash-v2-py312",
+    "imageId": "sha256:7a8b475003c4fe15a2cd4e55e5cfc2f3560bdc9333d624f24cdd6d4340fd7a17",
+    "startedAtUtc": "2026-10-26T17:37:11.283301522Z",
+    "completedAtUtc": "2026-10-26T17:48:10.336989054Z",
+    "returncode": 0,
+    "oomKilled": false,
+    "command": [
+      "sh",
+      "/proof/pydash-linux-run-v2.sh",
+      "py312"
+    ],
+    "fullLogRecoveredFromDocker": true,
+    "installedPackageConsumer": {
+      "python": "3.12.14 (main, Aug 25 2026, 01:17:55) [GCC 14.2.0]",
+      "packageFile": "/work/.tox/py312/lib/python3.12/site-packages/pydash/__init__.py",
+      "visits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "totals": [
+        90,
+        130,
+        140
+      ],
+      "expectedVisits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "expectedTotals": [
+        90,
+        130,
+        140
+      ],
+      "pass": true
+    }
+  },
+  {
+    "version": "3.14",
+    "env": "py314",
+    "candidateHead": "5674ec55d429ade516688fe696688d588b246aa9",
+    "archiveSha256": "a1cba56856f0eb19455ac6b7c2ebee095ffc03d877b7def33748193345eaa4a6",
+    "container": "ghpr-resume-pydash-v2-py314",
+    "imageId": "sha256:0514bc76712d64f8bb48adcb95b1ab0d88c69fee95d62fe4c18ee948bee9b1e1",
+    "startedAtUtc": "2026-10-26T17:48:15.360834053Z",
+    "completedAtUtc": "2026-10-26T17:51:42.566134636Z",
+    "returncode": 0,
+    "oomKilled": false,
+    "command": [
+      "sh",
+      "/proof/pydash-linux-run-v2.sh",
+      "py314"
+    ],
+    "fullLogRecoveredFromDocker": true,
+    "installedPackageConsumer": {
+      "python": "3.14.9 (main, Oct 21 2026, 22:25:42) [GCC 14.2.0]",
+      "packageFile": "/work/.tox/py314/lib/python3.14/site-packages/pydash/__init__.py",
+      "visits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "totals": [
+        90,
+        130,
+        140
+      ],
+      "expectedVisits": [
+        {
+          "row": 2,
+          "item": "last"
+        },
+        {
+          "row": 1,
+          "item": "middle"
+        },
+        {
+          "row": 0,
+          "item": "first"
+        }
+      ],
+      "expectedTotals": [
+        90,
+        130,
+        140
+      ],
+      "pass": true
+    }
+  }
+]

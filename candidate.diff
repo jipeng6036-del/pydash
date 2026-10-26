@@ -1,0 +1,86 @@
+diff --git a/AUTHORS.rst b/AUTHORS.rst
+index 7e6ff11..577e601 100644
+--- a/AUTHORS.rst
++++ b/AUTHORS.rst
+@@ -69,3 +69,4 @@ Contributors
+ - Apeksha Pandey, `Apeksha9389@github <https://github.com/Apeksha9389>`_
+ - nk-batman21, `nk-batman21@github <https://github.com/nk-batman21>`_
+ - hansu650, `hansu650@github <https://github.com/hansu650>`_
++- jipeng6036-del, `jipeng6036-del@github <https://github.com/jipeng6036-del>`_
+diff --git a/CHANGELOG.rst b/CHANGELOG.rst
+index 1327c85..897f7d2 100644
+--- a/CHANGELOG.rst
++++ b/CHANGELOG.rst
+@@ -6,6 +6,8 @@ Changelog
+ Unreleased
+ ----------
+ 
++- Preserve original sequence indexes in ``reduce_right`` and ``reductions_right``
++  callbacks instead of numbering the reversed values again.
+ - Deduplicate single-array results in ``intersection``, ``intersection_by``, and
+   ``intersection_with``, honoring positional and keyword comparison rules.
+ - Preserve digits and uncased letters at word boundaries in ``prune`` (#349).
+diff --git a/src/pydash/collections.py b/src/pydash/collections.py
+index fec4057..708570e 100644
+--- a/src/pydash/collections.py
++++ b/src/pydash/collections.py
+@@ -1626,6 +1626,8 @@ def reduce_right(collection, iteratee=None, accumulator=None):
+ 
+         >>> reduce_right([1, 2, 3, 4], lambda total, x: total**x)
+         4096
++        >>> reduce_right([10, 20, 30], lambda total, x, index: total + x * (index + 1), 0)
++        140
+ 
+     .. versionadded:: 1.0.0
+ 
+@@ -1635,11 +1637,7 @@ def reduce_right(collection, iteratee=None, accumulator=None):
+     .. versionchanged:: 4.0.0
+         Removed alias ``foldr``.
+     """
+-    if isinstance(collection, Mapping):
+-        collection = dict(reversed(list(collection.items())))
+-    else:
+-        collection = list(collection)[::-1]
+-
++    collection = dict(reversed(list(iterator(collection))))
+     return reduce_(collection, iteratee, accumulator)
+ 
+ 
+diff --git a/tests/test_collections.py b/tests/test_collections.py
+index 8e85540..7836970 100644
+--- a/tests/test_collections.py
++++ b/tests/test_collections.py
+@@ -13,6 +13,33 @@ from . import helpers
+ parametrize = pytest.mark.parametrize
+ 
+ 
++@parametrize("factory", [list, tuple, iter])
++def test_right_reductions_keep_original_sequence_indexes(factory):
++    values = [10, 20, 30]
++
++    def collect(accumulator, value, index):
++        return accumulator + [(index, value)]
++
++    expected = [(2, 30), (1, 20), (0, 10)]
++    assert _.reduce_right(factory(values), collect, []) == expected
++    assert _.reductions_right(factory(values), collect, []) == [
++        expected[:1],
++        expected[:2],
++        expected,
++    ]
++    assert _.reductions(factory(values), collect, [], from_right=True)[-1] == expected
++    assert values == [10, 20, 30]
++
++
++@parametrize("factory", [list, tuple, iter])
++def test_right_reductions_keep_indexes_without_an_initial_accumulator(factory):
++    def weighted_total(accumulator, value, index):
++        return accumulator + value * (index + 1)
++
++    assert _.reduce_right(factory([10, 20, 30]), weighted_total) == 80
++    assert _.reductions_right(factory([10, 20, 30]), weighted_total) == [70, 80]
++
++
+ @parametrize("factory", [dict, MappingProxyType])
+ def test_reduce_right_mapping_order(factory):
+     collection = factory({"a": "A", "b": "B", "c": "C"})

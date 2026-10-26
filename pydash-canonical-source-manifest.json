@@ -1,0 +1,18 @@
+[
+  {
+    "label": "baseline",
+    "commit": "ef6a6427e488e29e827e0e0819f2630ad3ff4cdc",
+    "files": 78,
+    "archive": "pydash-baseline-canonical.tar",
+    "sha256": "68e9c56cdec7fc48b84b8d1d24a296d1916d448b2e0a776c9fb1ae65c9ab8a72",
+    "allGitBlobBytesAndModesVerified": true
+  },
+  {
+    "label": "candidate",
+    "commit": "5674ec55d429ade516688fe696688d588b246aa9",
+    "files": 78,
+    "archive": "pydash-candidate-canonical.tar",
+    "sha256": "a1cba56856f0eb19455ac6b7c2ebee095ffc03d877b7def33748193345eaa4a6",
+    "allGitBlobBytesAndModesVerified": true
+  }
+]

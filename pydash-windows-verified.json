@@ -1,0 +1,137 @@
+[
+  {
+    "name": "pydash-windows-baseline-origin",
+    "startedAtUtc": "2026-10-26T17:19:29.035325+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-c",
+      "import pydash;print(pydash.__file__)"
+    ],
+    "cwd": "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-baseline",
+    "returncode": 0,
+    "expected": 0
+  },
+  {
+    "name": "pydash-windows-baseline-configured",
+    "startedAtUtc": "2026-10-26T17:19:29.457772+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "src/pydash",
+      "tests",
+      "--cov=pydash",
+      "--ignore=tests/pytest_mypy_testing"
+    ],
+    "cwd": "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-baseline",
+    "returncode": 0,
+    "expected": 0
+  },
+  {
+    "name": "pydash-windows-red",
+    "startedAtUtc": "2026-10-26T17:19:47.699465+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests/test_collections.py",
+      "-k",
+      "right_reductions_keep",
+      "-o",
+      "addopts=",
+      "-q"
+    ],
+    "cwd": "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-baseline",
+    "returncode": 1,
+    "expected": 1
+  },
+  {
+    "name": "pydash-windows-green",
+    "startedAtUtc": "2026-10-26T17:19:48.910775+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "tests/test_collections.py",
+      "-k",
+      "right_reductions_keep",
+      "-o",
+      "addopts=",
+      "-q"
+    ],
+    "cwd": "<workspace>\\inspection\\resume-20261026-root-pydash",
+    "returncode": 0,
+    "expected": 0
+  },
+  {
+    "name": "pydash-windows-candidate-configured",
+    "startedAtUtc": "2026-10-26T17:19:49.753158+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "src/pydash",
+      "tests",
+      "--cov=pydash",
+      "--ignore=tests/pytest_mypy_testing"
+    ],
+    "cwd": "<workspace>\\inspection\\resume-20261026-root-pydash",
+    "returncode": 0,
+    "expected": 0
+  },
+  {
+    "name": "pydash-windows-ruff",
+    "startedAtUtc": "2026-10-26T17:20:05.244886+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "check"
+    ],
+    "cwd": "<workspace>\\inspection\\resume-20261026-root-pydash",
+    "returncode": 0,
+    "expected": 0
+  },
+  {
+    "name": "pydash-windows-format",
+    "startedAtUtc": "2026-10-26T17:20:05.500454+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-m",
+      "ruff",
+      "format",
+      "--check"
+    ],
+    "cwd": "<workspace>\\inspection\\resume-20261026-root-pydash",
+    "returncode": 0,
+    "expected": 0
+  },
+  {
+    "name": "pydash-windows-mypy",
+    "startedAtUtc": "2026-10-26T17:20:05.712781+00:00",
+    "command": [
+      "<workspace>\\ci-evidence\\resume-20261026-root\\pydash-venv\\Scripts\\python.exe",
+      "-m",
+      "mypy",
+      "src/pydash",
+      "tests",
+      "tasks.py",
+      "--no-error-summary"
+    ],
+    "cwd": "<workspace>\\inspection\\resume-20261026-root-pydash",
+    "returncode": 0,
+    "expected": 0
+  },
+  {
+    "name": "pydash-diff-check",
+    "startedAtUtc": "2026-10-26T17:20:08.623890+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "<workspace>\\inspection\\resume-20261026-root-pydash",
+    "returncode": 0,
+    "expected": 0
+  }
+]
